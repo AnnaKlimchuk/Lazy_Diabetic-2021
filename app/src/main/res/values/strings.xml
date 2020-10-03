@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Ленивый диабетик</string>
+    <string name="set_measurement_to_base">Внеси в базу</string>
+    <string name="set_measurement">Показание\nглюкометра</string>
+    <string-array name="mael_list">
+        <item>Барсик</item>
+        <item>Мурзик</item>
+        <item>Васька</item>
+        <item>Рыжик</item>
+    </string-array>
+</resources>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/measurement_distance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="День"
+        android:layout_margin="5dp"
+        android:textSize="30sp" />
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1" >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+            <TextView
+                android:id="@+id/text_glucometer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:textSize="30sp" />
+            <ImageView
+                android:id="@+id/picture_glucometer"
+                android:background="@drawable/empty_graph"
+                android:layout_height="75dp"
+                android:layout_width="75dp"
+                android:layout_margin="50dp"
+                android:layout_gravity="center"  />
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/graph_glucometer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1" >
+            <TextView
+                android:id="@+id/text_syringe_short"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:textSize="30sp" />
+            <ImageView
+                android:id="@+id/picture_syringe_short"
+                android:background="@drawable/empty_graph"
+                android:layout_height="75dp"
+                android:layout_width="75dp"
+                android:layout_margin="50dp"
+                android:layout_gravity="center" />
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/graph_syringe_short"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+    </TableRow>
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1" >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1" >
+            <TextView
+                android:id="@+id/text_meal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:textSize="30sp" />
+            <ImageView
+                android:id="@+id/picture_meal"
+                android:background="@drawable/empty_graph"
+                android:layout_height="75dp"
+                android:layout_width="75dp"
+                android:layout_margin="50dp"
+                android:layout_gravity="center"  />
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/graph_meal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1" >
+            <TextView
+                android:id="@+id/text_syringe_long"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:textSize="30sp" />
+            <ImageView
+                android:id="@+id/picture_syringe_long"
+                android:background="@drawable/empty_graph"
+                android:layout_height="75dp"
+                android:layout_width="75dp"
+                android:layout_margin="50dp"
+                android:layout_gravity="center" />
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/graph_syringe_long"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+    </TableRow>
+</LinearLayout>
