@@ -9,7 +9,7 @@ import java.text.ParseException;
 import android.arch.persistence.room.TypeConverter;
 
 public class DateConverter {
-    static DateFormat df = new SimpleDateFormat("MM/dd/yyyy HH:mm:ss", Locale.ENGLISH);
+    static DateFormat df = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss", Locale.ENGLISH);
     static DateFormat timeFormat = new SimpleDateFormat("HH:mm");
     static DateFormat dateFormat = new SimpleDateFormat("dd.MM.yyyy");
     static DateFormat dateFormatGraph = new SimpleDateFormat("dd.MM");

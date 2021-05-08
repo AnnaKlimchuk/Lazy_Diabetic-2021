@@ -94,11 +94,10 @@ public class GraphsActivity extends AppCompatActivity {
                 GraphSyringeLong);
     }
 
-    private static void loadData() {
+    private void loadData() {
         LoadMeasurements loadList = new LoadMeasurements();
         loadList.execute(DateConverter.fromDate(dateStart)
                 + ";" + DateConverter.fromDate(dateEnd));
-
         try {
             String loadListStr = loadList.get();
             Gson gson = new Gson();
@@ -218,12 +217,13 @@ public class GraphsActivity extends AppCompatActivity {
         graphChart.invalidate();
     }
 
-    private static class LoadMeasurements extends AsyncTask<String, Void, String> {
+    private class LoadMeasurements extends AsyncTask<String, Void, String> {
         @Override
         protected String doInBackground(final String ... s) {
             String[] tokens = s[0].split(";");
             List<Measurement> measurements = LazyDiabeticApplication.getMeasurementDao()
-                    .loadBetweenDates(tokens[0], tokens[1]);
+                    .loadBetweenDates(DateConverter.toDate(tokens[0]),
+                            DateConverter.toDate(tokens[1]));
             return measurements.toString();
         }
     }
